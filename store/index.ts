@@ -7,7 +7,7 @@ export const state = () => ({
 export type RootState = ReturnType<typeof state>
 
 export const getters: GetterTree<RootState, RootState> = {
-  name: state => state.name,
+  name: (state) => state.name,
 }
 
 export const mutations: MutationTree<RootState> = {
@@ -16,8 +16,7 @@ export const mutations: MutationTree<RootState> = {
 
 export const actions: ActionTree<RootState, RootState> = {
   async fetchThings({ commit }) {
-    const things = await this.$axios.$get('/things')
-    console.log(things)
+    await this.$axios.$get('/things')
     commit('CHANGE_NAME', 'New name')
   },
 }

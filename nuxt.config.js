@@ -14,15 +14,15 @@ export default {
   },
 
   publicRuntimeConfig: {
-      axios: {
-          browserBaseURL: process.env.BROWSER_BASE_URL
-      }
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
+    },
   },
 
   privateRuntimeConfig: {
-      axios: {
-          baseURL: process.env.BASE_URL
-      }
+    axios: {
+      baseURL: process.env.BASE_URL,
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,10 +42,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/dotenv',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
